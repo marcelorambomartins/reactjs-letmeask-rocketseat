@@ -4,7 +4,7 @@ import { Button } from './components/Button';
 
 function App() {
   return (
-    <Button title="Clique Aqui para incrementar"></Button>
+    <Button title="Clique Aqui para incrementar "></Button>
   );
 }
 
