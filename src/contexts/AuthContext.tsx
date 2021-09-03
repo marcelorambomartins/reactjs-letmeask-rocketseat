@@ -22,7 +22,7 @@ export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps){
     
-    const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User>();
 
   useEffect(()=>{
     const unsubscribe = auth.onAuthStateChanged(user =>{
@@ -66,9 +66,9 @@ export function AuthContextProvider(props: AuthContextProviderProps){
     }
   }
 
-    return (
-        <AuthContext.Provider value={{user, signInWithGoogle}}>
-
-        </AuthContext.Provider>
-    );
+  return (
+      <AuthContext.Provider value={{user, signInWithGoogle}}>
+        {props.children}
+      </AuthContext.Provider>
+  );
 }
